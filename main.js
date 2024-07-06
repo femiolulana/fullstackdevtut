@@ -4,7 +4,7 @@ let experencePoint = 0
 let health = 100
 let gold = 50
 let currentWeapon = 0
-fight;
+let fighting;
 let monsterHealth
 let inventory = ["stick", "dagger","sword"]
 
@@ -18,7 +18,40 @@ const goldText = document.querySelector("#goldText");
 const monsterNameText = document.querySelector("#monsterNameText");
 const monsterHealthText = document.querySelector("#monsterHealthText");
 
-// 
+// intitialize buttons
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
+
+// create the functions 
+
+function goStore(){
+    button1.innerText = "Buy 10 health (10 gold)"
+    button2.innerText = "Buy weapon (30 gold)"
+    button3.innerText = "Go to Town Square"
+    button1.onclick = buyHealth;
+    button2.onclick = buyWeapon;
+    button3.onclick = goToTown;
+    text.innerText = "You entered the store"
+}
+
+function goCave(){
+    console.log('Going to Cave')
+}
+
+function fightDragon(){
+    console.log('FightDragon')
+}
 
 
- 
+ function buyHealth(){
+
+ }
+
+ function buyWeapon(){
+    
+ }
+
+ function goToTown(){
+    
+ }

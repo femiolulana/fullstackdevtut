@@ -113,6 +113,8 @@ function fightDragon(){
         text.innerText = "You now have a " + newWeapon;
         inventory.push[newWeapon]
         text.innerTet += "In your Inventory , you have: "+ inventory
+    }else{
+        text.innerText="You do not have enough gold to buy a weapon"
     }
  }
 

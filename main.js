@@ -67,7 +67,7 @@ function update(location){
     button1.onclick = location[button_functions][0];
     button2.onclick = location[button_functions][1];
     button3.onclick = location[button_functions][2];
-    text.innerText = location.text
+    text.innerText = location.text[0]
 
 };
 
@@ -97,7 +97,7 @@ function fightDragon(){
         gold -= 10
         health += 10
         goldText.innerText = gold
-        healthText.innerText = healthText
+        healthText.innerText = health
     }else{
         text.innerText ="You broke. You dont have the money"
     }
@@ -125,3 +125,5 @@ function fightDragon(){
  function fightBeast(){
     
  }
+ healthText.innerText = health;
+ goldText.innerText = gold;

@@ -78,7 +78,15 @@ const locations = [
         buttonText: ["Fight Slime", "Fight fanged beast", "Go to town square"],
         buttonFunctions: [fightSlime, fightBeast, goToTown],
         text: ["You enter the cave. You see monsters."]
+    },
+    {
+        name: 'fight',
+        buttonText: ["Attack", "Dodge", "Run"],
+        buttonFunctions: [fight, dodge, goToTown],
+        text: ["You enter the cave. You see monsters."]
     }
+
+
 ];
 
 
@@ -176,5 +184,19 @@ function goCave(){
 }
 
 function goFight () {
+    update(locations[3]);
+    monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block"
+    monsterNameText.innerHTML = monster[fighting].name
+    monsterHealth.innerText = monsterHealth;
+}
+
+function attack () {
+    text.innerText = "The " + monsters[fighting].name + "attacks."
+    text.innerText += "You attack it with your " + weapons[currentWeapon].name + ".";
+    health -= monsters[fighting].level;
+}
+
+function dodge    () {
 
 }
